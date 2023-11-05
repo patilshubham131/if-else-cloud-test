@@ -1,0 +1,71 @@
+<div class="dashboard-main-div">
+    <div *ngFor="let card of dashboardData.top_cards; let i = index">
+        <app-top-card [percentage]="card.sub_header.split('%')[0]" [firstHeader]="card.sub_header.split('%')[1]"
+            [secondHeader]="card.header" [iconIndex]="i"></app-top-card>
+    </div>
+</div>
+
+<div class="row mt-3 margin-left-2per">
+    <div class="col-md-7 recent-order-title">
+        <div class="mb-3 recent-order">
+            Recent Order
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th class="srno">#</th>
+                    <th class="width-150px">Customer</th>
+                    <th>Product</th>
+                    <th class="width-150px">Delivery Date</th>
+                    <th>Status</th>
+                    <th class="width-120px">Tracking No#</th>
+                    <th>Shipping</th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let order of dashboardData.recent_orders; let i = index">
+                    <td class="srno">{{i}}</td>
+                    <td class="width-150px">{{order.name}}</td>
+                    <td>{{order.product}}</td>
+                    <td  class="width-150px">{{order.delivery_date | date:"dd MMM, yyyy"}}</td>
+                    <td>
+                        <div [ngClass]="order.status">{{order.status}}</div>
+                    </td>
+                    <td class="width-120px">{{order.tracking_no}}</td>
+                    <td>{{order.shipping ? "Yes" : "No"}}</td>
+                    <td (click)="openInfoPopup(i)" class="x">x</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-md-4 new-registration-main-div">
+        <div class="mb-3 new-registration-title">
+            New User Registration
+        </div>
+        <table>
+            <tbody class="user-table-body">
+                <tr *ngFor="let user of dashboardData.new_users">
+                    <td class="width-60px"><img
+                            src="https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250" alt="Avatar" />
+                    </td>
+                    <td class="width-150px">
+                        <div>{{user.name}}</div>
+                        <div>{{user.country}}</div>
+                    </td>
+                    <td><progress id="userProgress" value={{user.progress}} max="100" class="width-40px"> 32%
+                        </progress> {{user.progress + "%"}}</td>
+                    <td><button class="user-button">More</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<app-dashboard-chart></app-dashboard-chart>
+
+<div>
+
+</div>

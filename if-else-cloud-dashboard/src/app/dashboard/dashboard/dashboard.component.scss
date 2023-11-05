@@ -1,0 +1,157 @@
+
+table {
+    border-collapse: collapse;
+    width: 97%;
+    table-layout: fixed;
+    background-color: white;
+    margin-left: 3%;
+}
+th, td {
+    border-top: 1px solid #d3d3d3;
+    border-bottom: none; 
+    border-left: none; 
+    border-right: none; 
+    padding: 8px;
+    text-align: left;
+    width: 95px;
+    font-size: 12px;
+    
+}
+
+
+thead, tbody {
+    height: 200px; 
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: inline-block;
+    width: 100%;
+
+}
+
+tbody:hover{
+    overflow-y: auto;
+}
+
+thead{
+    height: 40px; 
+    overflow-y: hidden;
+}
+
+.user-table-body{
+    height:238px; 
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: inline-block;
+    width: 100%;
+}
+
+.user-table-body:hover{
+    overflow: auto;
+}
+
+.srno{
+    width: 5px;
+}
+
+img{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.user-button{
+    background-color: #eff2f9;
+    color: #a2a9b6;
+    border: none;
+    padding: 8px;
+    width: 60px;
+    border-radius: 10%;
+}
+
+button:hover{
+    background-color: #506de2;
+    color:white;
+}
+
+.Paid{
+    background-color: #31ce73;
+    color: white;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 5%;
+}
+.Pending{
+    background-color: #6d799b;
+    color: white;
+    display: flex;
+    width: auto;
+    justify-content: center;
+    border-radius: 5%;
+}
+
+.Failed{
+    background-color: #ec586e;
+    color: white;
+    display: flex;
+    justify-content: center;
+    border-radius: 5%;
+    width: auto;
+}
+
+.dashboard-main-div{
+    margin-left: 2%;
+    display: flex; 
+    flex-grow: grow; 
+    margin-top:3%
+}
+
+.margin-left-2per{
+    margin-left: 2%;
+}
+
+.recent-order{
+    font-weight: bold; 
+    margin-left:3%; 
+    margin-top:3%
+}
+
+.recent-order-title{
+    background-color: white; 
+    margin-left:1%
+}
+
+.width-150px{
+    width: 150px;
+}
+
+.width-120px{
+    width: 120px;
+}
+
+.width-60px{
+    width: 60px;
+}
+
+.width-40px{
+    width: 40px;
+}
+
+.x{
+    cursor: pointer;
+}
+
+.new-registration-main-div{
+    margin-left: 1.2%; 
+    background-color: white; 
+    width:35%
+}
+
+.new-registration-title{
+    font-weight: bold; 
+    margin-left:3%; 
+    margin-top:3%
+}
+
+
+
